@@ -6,9 +6,9 @@
  * Time: 17:17
  */
 
-namespace colq2\PhpIPAMClient;
+namespace phpipam\PhpIPAMClient;
 
-use colq2\PhpIPAMClient\Connection\Connection;
+use phpipam\PhpIPAMClient\Connection\Connection;
 
 function phpipamMakeURL($url, $scheme = 'https://'): string
 {

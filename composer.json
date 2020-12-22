@@ -24,7 +24,7 @@
     },
     "autoload": {
         "psr-4": {
-          "colq2\\PhpIPAMClient\\": "src/"
+          "phpipam\\PhpIPAMClient\\": "src/"
         },
         "files": [
             "src/helpers.php"

@@ -6,13 +6,13 @@
  * Time: 15:36
  */
 
-namespace colq2\PhpIPAMClient\Controller;
+namespace phpipam\PhpIPAMClient\Controller;
 
-use colq2\PhpIPAMClient\Exception\PhpIPAMException;
+use phpipam\PhpIPAMClient\Exception\PhpIPAMException;
 
 /**
  * Class Section
- * @package colq2\PhpIPAMClient\Controller
+ * @package phpipam\PhpIPAMClient\Controller
  */
 class Section extends BaseController
 {

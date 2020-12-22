@@ -6,7 +6,7 @@
  * Time: 11:40
  */
 
-namespace colq2\PhpIPAMClient\Controller;
+namespace phpipam\PhpIPAMClient\Controller;
 
 
 class Device extends BaseController

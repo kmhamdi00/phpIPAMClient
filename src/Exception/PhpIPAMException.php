@@ -6,7 +6,7 @@
  * Time: 17:57
  */
 
-namespace colq2\PhpIPAMClient\Exception;
+namespace phpipam\PhpIPAMClient\Exception;
 
 
 use Throwable;

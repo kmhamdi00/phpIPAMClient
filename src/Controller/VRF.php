@@ -6,7 +6,7 @@
  * Time: 11:39
  */
 
-namespace colq2\PhpIPAMClient\Controller;
+namespace phpipam\PhpIPAMClient\Controller;
 
 
 class VRF extends BaseController

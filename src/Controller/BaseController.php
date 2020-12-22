@@ -6,9 +6,9 @@
  * Time: 13:11
  */
 
-namespace colq2\PhpIPAMClient\Controller;
+namespace phpipam\PhpIPAMClient\Controller;
 
-use function colq2\PhpIPAMClient\phpipamConnection;
+use function phpipam\PhpIPAMClient\phpipamConnection;
 
 abstract class BaseController
 {

@@ -6,7 +6,7 @@
  * Time: 11:34
  */
 
-namespace colq2\PhpIPAMClient\Controller;
+namespace phpipam\PhpIPAMClient\Controller;
 
 
 class VLAN extends BaseController

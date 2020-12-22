@@ -6,10 +6,10 @@
  * Time: 22:18
  */
 
-namespace colq2\PhpIPAMClient\Controller;
+namespace phpipam\PhpIPAMClient\Controller;
 
 
-use colq2\PhpIPAMClient\Exception\PhpIPAMRequestException;
+use phpipam\PhpIPAMClient\Exception\PhpIPAMRequestException;
 
 class Subnet extends BaseController
 {

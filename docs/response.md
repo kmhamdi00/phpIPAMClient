@@ -1,6 +1,6 @@
 # Response
 
-The `colq2\PhpIPAMClient\Connection\Respose` Object is used to handle the Response from the server.
+The `phpipam\PhpIPAMClient\Connection\Respose` Object is used to handle the Response from the server.
 Also this is the return of the `call` function of the `PhpIPAMClient`.
 
 The object has 6 attributes:

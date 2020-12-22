@@ -6,7 +6,7 @@
  * Time: 15:48
  */
 
-namespace colq2\PhpIPAMClient\Controller;
+namespace phpipam\PhpIPAMClient\Controller;
 
 
 class Folder extends Subnet

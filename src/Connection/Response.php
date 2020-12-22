@@ -6,7 +6,7 @@
  * Time: 01:48
  */
 
-namespace colq2\PhpIPAMClient\Connection;
+namespace phpipam\PhpIPAMClient\Connection;
 
 
 class Response

@@ -14,13 +14,13 @@ You can install this package through composer:
 
 At the moment I suggest to stay at the 1.0.x-dev version:
 
-`composer require colq2/phpipam-client:1.0.x-dev`
+`composer require phpipam/phpipam-client:1.0.x-dev`
 
 cause i always find some small issues and todo's that I'm fixing on this branch.
 
 Else you can go with the current release:
 
-`composer require colq2/phpipam-client`
+`composer require phpipam/phpipam-client`
 
 
 ## Basic Usage
@@ -37,13 +37,13 @@ Read more on [Security](#security)
 
 
 ### Initialize connection
-`use colq2\PhpIPAMClient;`
+`use phpipam\PhpIPAMClient;`
 
 `$client = new PhpIPAMClient('1.2.3.4', 'myApp', 'name', 'password', 'apikey');`
 
 or
 
-`use colq2\PhpIPAMClient\Connection\Connection;`
+`use phpipam\PhpIPAMClient\Connection\Connection;`
 
 `Connection::initializeConnection('1.2.3.4', 'myApp', 'name', 'password', 'apikey');`
 
@@ -52,10 +52,10 @@ or
 I will use the sections controller as Example.
 It's important to understand, that this api ist strong object oriented. This means, that the controllers can be used as objects that represents the objects server side. The objects provides getter and setter for their attributes. And you can set client side objects to the attribute. This client handles to conversion between Object and IDs on it's own!
 
-Import the controller with `use colq2\PhpIPAMClient\Controller\Section;` at the top.
+Import the controller with `use phpipam\PhpIPAMClient\Controller\Section;` at the top.
 #### Get all sections
 
-To get all sections use the getAll method. This return an array with all sections as `colq2\Controller\Section` instances.
+To get all sections use the getAll method. This return an array with all sections as `phpipam\Controller\Section` instances.
 
 `$sections = Section::getAll();`
 
@@ -93,7 +93,7 @@ But the array will override the given attributes.
 ### Second Way
 `$response = $client->call('method', 'controller', ['identifier_array'], ['param_array']);`
 
-This will return an instance of `colq2\Connection\Response`.
+This will return an instance of `phpipam\Connection\Response`.
 You can access the data using the getData method.
 
 `$data = $response->getData()`
@@ -128,7 +128,7 @@ For more detailed information for all methods and controller look at [phpIPAM we
 
 The last parameter a of the construct is a value of the following constants:
 
-`use colq2\PhpIPAMClient\Connection\Connection`
+`use phpipam\PhpIPAMClient\Connection\Connection`
 * `Connection::SECURITY_METHOD_SSL`
 * `Connection::SECURITY_METHOD_CRYPT`
 * `Connection::SECURITY_METHOD_BOTH`
@@ -138,7 +138,7 @@ I recommend to use the SLL method. For this you need a https connection to your 
 If you don't have the possibility to use SSL use crypt. You need to provide the API Key from the Backend.
 Furthermore you need to change one file serverside cause phpipam uses `mcrypt` but this method is deprecated. I am using `openssl`. 
 
-[index.php](https://github.com/colq2/phpipam/blob/master/api/index.php)
+[index.php](https://github.com/phpipam/phpipam/blob/master/api/index.php)
 
 It is on my repo but i will stay in contact with the developer of phpipam so that we can find together a solution for that. 
 

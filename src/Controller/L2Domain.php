@@ -6,7 +6,7 @@
  * Time: 11:38
  */
 
-namespace colq2\PhpIPAMClient\Controller;
+namespace phpipam\PhpIPAMClient\Controller;
 
 
 class L2Domain extends BaseController
