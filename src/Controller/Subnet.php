@@ -645,4 +645,9 @@ class Subnet extends BaseController
 		return $this->editDate;
 	}
 
+	public function getSearchByMaskAndIp(string $ip, int $mask)
+	{
+		return $this->_get(['cidr', $ip, $mask])->getData();
+	}
+
 }
