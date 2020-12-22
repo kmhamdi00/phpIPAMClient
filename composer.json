@@ -1,5 +1,5 @@
 {
-    "name": "colq2/phpipam-client",
+    "name": "php/phpipam-client",
   "description": "A API Client for phpIPAM written in PHP",
   "keywords": [
     "phpipam",
@@ -11,10 +11,10 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "Oliver Wycisk",
-      "email": "development@o-wycisk.de",
+      "name": "Khaled MHAMDI",
+      "email": "mhemdi00khaled@gmail.com",
       "role": "Developer",
-      "homepage": "https://o-wycisk.de"
+      "homepage": ""
     }
   ],
     "require": {
