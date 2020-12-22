@@ -1,5 +1,5 @@
 {
-    "name": "php/phpipam-client",
+    "name": "phpipam/phpipam-client",
   "description": "A API Client for phpIPAM written in PHP",
   "keywords": [
     "phpipam",
