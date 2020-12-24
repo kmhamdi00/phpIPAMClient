@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: sonyon
- * Date: 09.01.18
- * Time: 11:34
- */
+
 
 namespace phpipam\PhpIPAMClient\Controller;
 
@@ -55,7 +50,6 @@ class Address extends BaseController
 		if($subnet instanceof Subnet){
 			$subnet = $subnet->getId();
 		}
-
 		return new Address(self::_getStatic([$ip, $subnet])->getData());
 	}
 
@@ -135,8 +129,6 @@ class Address extends BaseController
 		if($subnet instanceof Subnet){
 			$subnet = $subnet->getId();
 		}
-
-		$params = self::transformParamsToIDs($params);
 		$response = self::_postStatic(['first_free', $subnet], $params);
 		$id = $response->getBody()['id'];
 		return Address::getByID($id);
@@ -471,6 +463,9 @@ class Address extends BaseController
 		return $this->editDate;
 	}
 
-
+	public function deleteAddress()
+  {
+ 	 return $this->_delete([$this->id])->isSuccess();
+  }
 
 }

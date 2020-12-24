@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Oliver
- * Date: 07.01.2018
- * Time: 22:18
- */
+ 
 
 namespace phpipam\PhpIPAMClient\Controller;
 
@@ -83,11 +78,13 @@ class Subnet extends BaseController
 	{
 		$slaves  = $this->_get([$this->id, 'slaves'])->getData();
 		$subnets = [];
-
-		foreach ($slaves as $slave)
-		{
-			$subnets[] = new Subnet($slave);
+		if (is_array($slaves)) {
+			foreach ($slaves as $slave)
+			{
+				$subnets[] = new Subnet($slave);
+			}
 		}
+
 
 		return $subnets;
 	}
@@ -156,10 +153,9 @@ class Subnet extends BaseController
 		return $this->_get(['search', $subnet])->getData();
 	}
 
-	public function postFirstSubnet(int $mask): Subnet
+	public function postFirstSubnet(int $mask, array $params = array()): Subnet
 	{
-		$response = $this->_post([$this->id, 'first_subnet', $mask]);
-		dd($response);
+		$response = $this->_post([$this->id, 'first_subnet', $mask], $params);
 		$id = $response->getBody()['id'];
 
 		return Subnet::getByID($id);
@@ -647,7 +643,28 @@ class Subnet extends BaseController
 
 	public function getSearchByMaskAndIp(string $ip, int $mask)
 	{
-		return $this->_get(['cidr', $ip, $mask])->getData();
+		$response = $this->_get(['cidr', $ip, $mask])->getData();
+		if (!empty($response))
+		{
+			return Subnet::getByID($response[0]['id']);
+		}
+		return $response;
+	}
+
+	public function getSearchByIp(string $ip)
+	{
+		$response = $this->_get(['cidr', $ip])->getData();
+		dd($response);
+		if (!empty($response))
+		{
+			return Subnet::getByID($response[0]['id']);
+		}
+		return $response;
+	}
+
+	public function deleteSubnet()
+	{
+		return $this->_delete([$this->id])->isSuccess();
 	}
 
 }
